@@ -51,9 +51,11 @@ app.post("/register", async (req, res) => {
         .select()
         .single();
 
-    if (error) return res.status(500).json({ message: error.message });
+        if (!data) {
+            return res.status(400).json({ error: "Nenhum dado encontrado" });
+        }        
 
-    res.status(201).json({ message: "Usuário cadastrado com sucesso!", user: data });
+    res.json({ message: "Usuário cadastrado com sucesso!", user: data });
 });
 
 // Rota para login
