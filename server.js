@@ -106,5 +106,5 @@ app.delete("/delete", authenticate, async (req, res) => {
 });
 
 // Inicia o servidor
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
