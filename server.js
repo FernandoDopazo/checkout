@@ -106,5 +106,5 @@ app.delete("/delete", authenticate, async (req, res) => {
 });
 
 // Inicia o servidor
-const PORT = process.env.PORT || checkout-production.up.railway.app;
-app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT,"0.0.0.0", () => console.log(`Servidor rodando em http://localhost:${PORT}`));
